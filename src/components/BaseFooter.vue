@@ -3,7 +3,7 @@
     <div class="me-footer">
       <p>Designed by
         <strong>
-          <router-link to="/" class="me-login-design-color">码神之路</router-link>
+          <router-link to="/" class="me-login-design-color">asudeM</router-link>
         </strong>
       </p>
     </div>
