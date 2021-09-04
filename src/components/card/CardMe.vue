@@ -18,17 +18,16 @@
     name: 'CardMe',
     data() {
       return {
-        qq: {title: 'QQ', message: '723663826'},
+        qq: {title: 'QQ', message: '1308529227'},
         bilibili: {
           title: '哔哩哔哩',
-          message: '<a target="_blank" href="https://space.bilibili.com/473844125">https://space.bilibili.com/473844125</a>'
+          message: '<a target="_blank" href="https://space.bilibili.com/13173878">https://space.bilibili.com/13173878</a>'
         }
       }
     },
     methods: {
       showTool(tool) {
         this.$message({
-          duration: 0,
           showClose: true,
           dangerouslyUseHTMLString: true,
           message: '<strong>' + tool.message + '</strong>'
