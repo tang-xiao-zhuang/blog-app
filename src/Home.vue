@@ -2,7 +2,7 @@
   <div id="home">
     <el-container>
 
-<!--    	<base-header :activeIndex="activeIndex"></base-header>-->
+    	<base-header :activeIndex="activeIndex"></base-header>
       <public_aside/>
 
 		  <router-view class="me-container"/>
