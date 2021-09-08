@@ -1,15 +1,15 @@
 <template>
   <div id="home">
     <el-container>
+<!--      <base-header :activeIndex="activeIndex"></base-header>-->
+      <el-aside width="10%" style="background-color: #FFFFFF">
+        <public_aside/>
+      </el-aside>
 
-    	<base-header :activeIndex="activeIndex"></base-header>
-      <public_aside/>
-
-		  <router-view class="me-container"/>
-
-			<base-footer v-show="footerShow"></base-footer>
-
-		</el-container>
+      <el-main>
+        <router-view/>
+      </el-main>
+    </el-container>
 
   </div>
 
@@ -22,37 +22,22 @@ import PublicAside from '@/components/aside/publicAside'
 
 export default {
   name: 'Home',
-  data (){
-  	return {
-  			activeIndex: '/',
-  			footerShow:true
-  	}
+  data() {
+    return {
+      activeIndex: '/',
+      footerShow: true
+    }
   },
-  components:{
-  	'base-header':BaseHeader,
-  	'base-footer':BaseFooter,
+  components: {
+    'base-header': BaseHeader,
+    'base-footer': BaseFooter,
     "public_aside": PublicAside
   },
-  beforeRouteEnter (to, from, next){
-  	 next(vm => {
-    	vm.activeIndex = to.path
-  	})
-  },
-  beforeRouteUpdate (to, from, next) {
-	  if(to.path == '/'){
-	  	this.footerShow = true
-	  }else{
-	  	this.footerShow = false
-	  }
-	  this.activeIndex = to.path
-	  next()
-	}
 }
 </script>
 
 <style>
 
-.me-container{
-  margin: 100px auto 140px;
+.me-container {
 }
 </style>

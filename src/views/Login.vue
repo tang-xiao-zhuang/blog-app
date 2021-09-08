@@ -41,8 +41,7 @@ export default {
   name: 'Login',
   data() {
     return {
-
-      isLogin: false,
+      isLogin: true,
       form: {
         account: '',
         nickname: '',

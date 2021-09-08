@@ -1,27 +1,22 @@
 <template>
   <div v-title data-title="asudeM">
-    <el-container>
+  <el-row :gutter="24">
+    <el-col :span="20">
+      <article-scroll-page></article-scroll-page>
 
-      <el-main class="me-articles">
+    </el-col>
+    <el-col :span="4">
+      <card-me class="me-area"></card-me>
+      <card-tag :tags="hotTags"></card-tag>
 
-        <article-scroll-page></article-scroll-page>
+      <card-article cardHeader="最热文章" :articles="hotArticles"></card-article>
 
-      </el-main>
+      <card-archive cardHeader="文章归档" :archives="archives"></card-archive>
 
-      <el-aside>
+      <card-article cardHeader="最新文章" :articles="newArticles"></card-article>
+    </el-col>
+  </el-row>
 
-        <card-me class="me-area"></card-me>
-        <card-tag :tags="hotTags"></card-tag>
-
-        <card-article cardHeader="最热文章" :articles="hotArticles"></card-article>
-
-        <card-archive cardHeader="文章归档" :archives="archives"></card-archive>
-
-        <card-article cardHeader="最新文章" :articles="newArticles"></card-article>
-
-      </el-aside>
-
-    </el-container>
   </div>
 </template>
 
